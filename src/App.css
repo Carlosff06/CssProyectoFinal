@@ -41,7 +41,7 @@
 }
 
 main {
-  background: linear-gradient(165deg,#15a04c 50%, #34a169 50%);
+  
   padding: 50px 0;
   border-radius: 10px;
 }
@@ -55,4 +55,182 @@ p.author {
 p.author a {
   text-decoration: none;
   font-weight: 700;
+}
+
+/**Ascensor**/
+.btn-active, .btn-secondary:hover{
+    color: red !important;
+    border: 2px solid red !important;
+}
+.puerta-ascensor-1.abrir{
+    animation-name: abrirPuerta1;
+    animation-duration: 2s;
+    transform: translateX(-90%);
+}
+.puerta-ascensor-2.abrir{
+    animation-name: abrirPuerta2;
+    animation-duration: 2s;
+    transform: translateX(90%);
+}
+.puerta-ascensor-1.cerrar{
+    animation-name: cerrarPuerta1;
+    animation-duration: 2s;
+    transform: translateX(0px);
+}
+.puerta-ascensor-2.cerrar{
+    animation-name: cerrarPuerta2;
+    animation-duration: 2s;
+    transform: translateX(0px);
+}
+.mecanismo.move{
+    animation-name:controlUp;
+    animation-duration: 5s;
+    
+
+}
+.mecanismo.up{
+    transform:translateY(-75%);
+}
+.mecanismo.down{
+    animation-name:controlDown;
+    animation-duration:5s;
+}
+/*Animacion de la Polea*/
+@keyframes rotarPolea{
+    from{
+    
+        transform:rotate(0deg);
+    }
+    to{
+        
+        transform:rotate(90deg);
+        
+    }
+}
+@keyframes bajarPolea{
+    from{
+        transform:rotate(90deg);
+    }
+    to{
+        transform:rotate(0deg);
+    }
+}
+
+@keyframes abrirPuerta1{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-90%);
+    }
+}
+@keyframes cerrarPuerta1{
+    from{
+        transform: translateX(-90%);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes abrirPuerta2{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(90%);
+    }
+}
+@keyframes cerrarPuerta2{
+    from{
+        transform: translateX(90%);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+/*Animacion del Ascensor*/
+
+@keyframes controlUp{
+    from{
+    transform: translateY(0px);
+    }
+    to{
+    transform: translateY(-75%);
+}
+}
+@keyframes controlDown{
+    from{
+        transform: translateY(-75%);
+
+    }
+    to{
+        transform: translateY(0px);
+    
+    }
+}
+
+/*Animacion del Cable*/
+@keyframes cable{
+    from{
+        transform:translateY(0);
+    }
+    to {
+        transform:translateY(-400px);
+    }
+}
+@keyframes cableDown{
+    from{
+        transform: translateY(-400px);
+    }
+    to{
+        transform:translateY(0px);
+    }
+}
+
+@media (min-width: 1500px) {
+    .card1{
+        width:30%;
+        height: 24%;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1490px){
+    .card1{
+        width:50%;
+        height: 24%;
+    }
+}
+@media (min-width:100px) and (max-width: 951px){
+    
+    .entorno{
+        
+        flex-direction: column;
+        
+    }
+    .espacio{
+        width:0;
+        height: 0;
+    }
+    .cuartomecanismo{
+        height:30%;
+        width:360px;
+    }
+    .paredes{
+        height: 600px;
+        width:360px;
+        justify-content: center;
+        align-items: center;
+    }
+    .ascensor-completo{
+        width:100%;
+        margin:0;
+        padding:0px;
+        justify-content: center;
+        align-items: center;
+    }
+    .card1{
+        width:100%;
+        height: 90%;
+    }
+    
 }

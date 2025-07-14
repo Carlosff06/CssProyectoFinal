@@ -1,12 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.current {
-  @apply font-medium text-white border-b-2 border-red02
-}
-
-
 body {
         min-height: 100vh;
         background: linear-gradient(120deg, #42a5f5 0%, #7e57c2 100%);
@@ -15,7 +6,6 @@ body {
       }
       .carousel .carousel-item {
         width: 350px !important;
-        cursor: pointer;
       }
       .person-card {
         margin: 0 auto;
